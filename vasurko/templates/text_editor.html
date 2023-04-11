@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block pad%}
+margin-left:486px;
+{%endblock%}
+{%block tag%}
+href="form/1/"
+{%endblock%}
+{%block content%}
+
+    <h3  id="headerr">Movie Titles --></h3>
+    
+    <div id="grid-co">
+        {%for i in name%}
+        <center>
+        <div class="cel">
+            <ul>
+                <li > <a href="form/{{i.id}}/"><img id="img"src="{{i.img.url}}"></a></li>
+                <li><p id="text">{{i.title}} </p></li>
+            </ul>
+        </div>
+        </center>
+        {%endfor%}
+    
+        
+    
+     
+    
+          
+        
+    </div>
+    
+
+    
+</body>
+</html>
+{%endblock%}

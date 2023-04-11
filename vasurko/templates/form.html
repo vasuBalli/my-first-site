@@ -1,0 +1,89 @@
+{%extends 'base.html'%}
+{%load static %}
+{% static "imgs" as baseUrl %}
+{%block myheading%}
+    
+{%endblock%}
+{%block mymsg%}
+    <span id="home"><a href="/" id="home">HOME</a></span>
+{%endblock%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'style3.css' %}">
+    <title>Document</title>
+</head>
+<style>
+    .og{
+        width:300px;
+        margin-top: 20px;
+        
+    }
+    .user-input{
+        margin-top: 15px;
+        justify-content: center;
+       
+         
+
+    }
+    #inputt{
+        width: 300px;
+        background-color: rgb(24, 25, 24);
+        border-style: none;
+        opacity: 40%;
+        color: rgb(243, 238, 238);
+        padding-left: 10px;
+    }
+    #home{
+        padding-top: 18px;
+        padding-right: 20px;
+        color: #D8D8D8;
+        text-decoration:none;
+    }
+    h1{
+        color: aliceblue;
+    }
+    
+
+</style>
+<body>
+    
+    
+    <form action="" class="user-input" >
+    <input type="text" id="inputt" placeholder="enter your name" name="name1"><br>
+    
+    </form>
+    {%if pkk == "4"%}
+    
+    {%if x %}
+    <center>
+    <img class="og" src="{{baseUrl}}/{{x}}.jpg" alt="">
+    </center>
+    {%else%}
+    <center>
+    <img class="og" src="{%static 'imgs/og.jpg'%}" alt="">
+    </center>
+    {%endif%}
+    {%elif pkk != "4"%}
+    {%if x %}
+   
+    <center>
+    <h1>No data this is a test object... sorry {{x}}</h1>
+    </center>
+    {%else%}
+    <center>
+    <h1>No data this is a test object... sorry!!</h1>
+    </center>
+    {%endif%}
+    {%endif%}
+
+  
+   
+
+</body>
+</html>
+{%endblock%}
